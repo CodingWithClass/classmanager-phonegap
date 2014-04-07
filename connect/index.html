@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title id="title">Connect - ClassManager</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdn.peerjs.com/0.3/peer.min.js"></script>
+		<script src="connect.js?"></script>
+		<script src="phonegap.js"></script>
+	</head>
+	<body>
+		<h1 class="text-center panel">ClassManager <small>version 0.0.2</small> Client</h1>
+		<div id="login">
+			<p class="alert alert-danger fade in" style="display: none;" id="connectfailed"><strong>Connect failed</strong> (Incorrect ID?)<button type="button" class="close" onClick="$('#connectfailed').fadeOut('slow');">&times;</button></p>
+			<p class="alert alert-danger fade in" style="display: none;" id="disconnected"><strong>Connect failed</strong> Disconnected by host.<button type="button" class="close" onClick="$('#disconnected').fadeOut('slow');">&times;</button></p>
+			<input class="block form-control" type="text" placeholder="ID" id="idBox" /><br /><button class="btn btn-primary btn-block" onClick="connect($('#idBox').val());">Connect</button>
+		</div>
+		<div id="buttons" style="display: none;">
+			<input class="block form-control" type="text" placeholder="Student Identification" id="stdid" /><br /><button class="btn btn-primary btn-block" onClick="leave($('#stdid').val());$('#stdid').val('');">Leaving</button><button class="btn btn-primary btn-block" onClick="back($('#stdid').val());$('#stdid').val('');">Back</button>
+			<h1>People out: <span id="outamount">0</span></h1>
+			<ul id="out">
+				
+			</ul>
+		</div>
+	</body>
+</html>
