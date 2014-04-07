@@ -12,8 +12,5 @@
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
 	
-	<access origin="http://bootstrapcdn.com" subdomains="true" />
-	<access origin="http://googlesyndication.com" subdomains="true" />
-	<access origin="http://googleapis.com" subdomains="true" />
-	<access origin="http://peerjs.com" subdomains="true" />
+	<access origin="*" />
 </widget>
