@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Host - ClassManage</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<script src="phonegap.js"></script>
+	</head>
+	<body>
+		<h1 class="text-center panel">ClassManager <small><a href="../changelog.html">version 0.0.2</a></small> Host</h1>
+		<p class="alert alert-warning">Your ID is <strong id="connectionID">loading</strong>. Type in the "ID" field on <a href="/connect/index.html">the connect page</a>.</p>
+		<p id="connection" class="alert alert-danger"><strong>Not connected!</strong></p>
+		<h1>People out: <span id="outamount">0</span></h1>
+		<ul id="out">
+			
+		</ul>
+		<h1>People out over the course of the session: <span id="outdayamount">0</span></h1>
+		<ul id="outday">
+			
+		</ul>
+		<button class="btn btn-success btn-block" onClick="save(stats);">Save</button>
+		<button class="btn btn-warning btn-block" onClick="load();">Load *CLEARS CURRENT DATA - SAVE FIRST*</button>
+		<button class="btn btn-danger btn-block" onClick="stats.out = {current: [], day: []}; update('out', stats.out.current); updateDay('outday', stats.out.day);">Clear data *INCLUDES SESSION*</button><br /><br /><br />
+		<div class="container">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- ClassManager -->
+			<ins id="ad" class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9246593173972688" data-ad-slot="3801071657" data-ad-format="auto"></ins>
+			<script id="ad2">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+			<small id="ad3" onClick="alert('classcoder.com costs $1/year. With ads, I can easily make $1/month with enough traffic. We will soon be getting a paid version without ads. At least, there are no ads on the Connect page.');">Why ads?</small>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdn.peerjs.com/0.3/peer.min.js?"></script>
+		<script src="host.js"></script>
+		<script>
+			if (chrome.app.isInstalled) {
+				document.getElementById("ad").style.display = "none";
+				document.getElementById("ad2").style.display = "none";
+				document.getElementById("ad3").style.display = "none";
+			}
+		</script>
+	</body>
+</html>
